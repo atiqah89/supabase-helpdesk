@@ -1,0 +1,31 @@
+{
+  "name": "supabase-helpdesk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Support ticket app on Supabase + Angular: Postgres RLS, magic-link auth, Realtime and an Edge Function.",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset",
+    "db:test": "supabase test db",
+    "db:types": "supabase gen types typescript --local > src/app/core/database.types.ts"
+  },
+  "dependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@supabase/supabase-js": "^2.58.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.0.0",
+    "@angular/cli": "^21.0.0",
+    "@angular/compiler-cli": "^21.0.0",
+    "supabase": "^2.40.0",
+    "typescript": "~5.9.2"
+  }
+}

@@ -1,0 +1,17 @@
+# Local development settings for `npx supabase start`.
+# Anything not listed here uses the Supabase CLI defaults.
+project_id = "supabase-helpdesk"
+
+[auth]
+site_url = "http://localhost:4200"
+# Magic links may only redirect to listed URLs. A missing entry is the classic
+# "link opens the wrong page / localhost:3000" support ticket.
+additional_redirect_urls = ["http://localhost:4200", "http://127.0.0.1:4200"]
+
+[auth.email]
+enable_confirmations = false
+
+# Called by a Database Webhook with a shared secret header, not by a signed-in user,
+# so it doesn't expect a user JWT.
+[functions.notify-urgent]
+verify_jwt = false
